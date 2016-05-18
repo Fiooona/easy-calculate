@@ -1,14 +1,19 @@
+var n= 0;
+var median_num;
+var odd=0;
 function calculate_median(arr) {
-    for(var n= 0,i=0;i<arr.length;i++){
+    for(var i=0;i<arr.length;i++){
         if((i%2)!=0){
-            //奇数位
-            var num;
-            num+=arr[i];
+            //偶数位
+            odd +=parseInt(arr[i]);
             n++;
         }
-        var median_num=num/n;
     }
-    return   median_num
+    median_num=odd/n;
+
+    return   median_num;
 }
 
+//arr=[1,2,3,4,5,6,7,8,9];
+//console.log(calculate_median(arr));
 module.exports = calculate_median;
