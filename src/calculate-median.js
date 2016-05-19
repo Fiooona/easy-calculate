@@ -10,7 +10,7 @@ function calculate_median(arr) {
     if ((n%2)==0){
         //偶数
         index=n;
-        return (arr[index-1]+arr[index+1])/2;
+        return ((arr[index-1]+arr[index+1])/2);
     }
     else{
         index=n;
