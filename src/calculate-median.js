@@ -1,17 +1,23 @@
-var n= 0;
 var median_num;
-var odd=0;
+var index;
 function calculate_median(arr) {
     for(var i=0;i<arr.length;i++){
         if((i%2)!=0){
-            //偶数位
-            odd +=parseInt(arr[i]);
+            //偶数位n个
             n++;
         }
-    }
-    median_num=odd/n;
 
-    return   median_num;
+    }
+    if ((n%2)==0){
+        //偶数
+        index=n
+        return (arr[index-1]+arr[index+1])/2;
+    }
+    else{
+        index=n;
+        return   arr[index];
+    }
+
 }
 
 //arr=[1,2,3,4,5,6,7,8,9];
