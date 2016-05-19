@@ -1,4 +1,5 @@
-var n;
+var n=0;
+var index=0;
 function calculate_median(arr) {
     for(var i=0;i<arr.length;i++){
         if((i%2)!=0){
@@ -8,10 +9,12 @@ function calculate_median(arr) {
     }
     if ((n%2)==0){
         //偶数
-        return (arr[n-1]+arr[n+1])/2;
+        index=n;
+        return (arr[index-1]+arr[index+1])/2;
     }
     else{
-        return   arr[n];
+        index=n;
+        return   arr[index];
     }
 
 }
